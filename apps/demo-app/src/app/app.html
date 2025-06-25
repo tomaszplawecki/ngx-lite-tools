@@ -1,2 +1,12 @@
-<app-nx-welcome></app-nx-welcome>
 <router-outlet></router-outlet>
+
+<button
+  [copyToClipboard]="text"
+  (copied)="copied = $event"
+>
+  📋 Kopiuj tekst
+</button>
+@if(copied) {
+  <p>✅ Skopiowano do schowka!</p>
+}
+

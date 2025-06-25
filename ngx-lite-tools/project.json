@@ -1,0 +1,36 @@
+{
+  "name": "ngx-lite-tools",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "ngx-lite-tools/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "ngx-lite-tools/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "ngx-lite-tools/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "ngx-lite-tools/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "ngx-lite-tools/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
