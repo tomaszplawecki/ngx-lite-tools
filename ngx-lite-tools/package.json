@@ -1,6 +1,7 @@
 {
-  "name": "@tomaszplawecki/ngx-lite-tools",
-  "version": "0.0.1",
+  "name": "ngx-lite-tools",
+  "version": "0.0.2",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^19.2.0",
     "@angular/core": "^19.2.0"
