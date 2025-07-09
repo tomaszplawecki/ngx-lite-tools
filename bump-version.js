@@ -4,7 +4,7 @@ const semver = require('semver');
 const { execSync } = require('child_process');
 
 // Ścieżka do pliku package.json
-const packageJsonPath = './package.json';
+const packageJsonPath = './ngx-lite-tools/package.json';
 
 // Pobierz typ podbicia wersji z argumentów (domyślnie: patch)
 const bumpType = process.argv[2] || 'patch';
