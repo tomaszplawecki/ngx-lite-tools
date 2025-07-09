@@ -1,8 +1,12 @@
 {
   "name": "@ngx-lite-tools/source",
-  "version": "0.0.0",
+  "version": "0.0.6",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "bump:patch": "node bump-version.js patch",
+    "bump:minor": "node bump-version.js minor",
+    "bump:major": "node bump-version.js major"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "19.2.3",
@@ -14,6 +18,7 @@
     "@angular/platform-browser-dynamic": "19.2.3",
     "@angular/router": "19.2.3",
     "rxjs": "~7.8.0",
+    "semver": "^7.7.2",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
